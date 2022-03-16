@@ -41,9 +41,10 @@ INSTALLED_APPS = [
 
 
     #All Auth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
+   "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    'pages.app.PagesConfig'
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'login.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,4 +136,6 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
+
 SITE_ID = 1
+LOGIN_REDIRECT_URL = "/"
