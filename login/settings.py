@@ -44,7 +44,7 @@ INSTALLED_APPS = [
    "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    'pages.app.PagesConfig'
+    'pages'
 ]
 
 MIDDLEWARE = [
